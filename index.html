@@ -373,7 +373,6 @@
     <a href="profile.html" id="navProfile">プロフィール</a>
     <a href="#research" id="navResearch">研究</a>
     <a href="#news" id="navNews">お知らせ</a>
-    <a href="#contact" id="navContact">お問い合わせ</a>
   </div>
 </div>
 
@@ -430,12 +429,6 @@
         <p id="r2d">子どもが困ったときに周囲へ助けを求める行動が、どのように発達し文化差として現れるのかを研究しています。</p>
       </a>
 
-      <a class="research-card" href="https://example.com/research3" target="_blank" onclick="countClick(3)">
-        <span class="view-badge" id="badge3">0 views</span>
-        <div class="r-num">03</div>
-        <h3 id="r3t">文化と親子相互作用</h3>
-        <p id="r3d">親の語りかけや期待、日常的な相互作用を通じて、子どもが文化的な解釈枠組みをどのように学ぶかを検討しています。</p>
-      </a>
     </div>
   </section>
 </div>
@@ -453,33 +446,7 @@
   </section>
 </div>
 
-<div class="container">
-  <section id="contact">
-    <div class="sec-label center" id="secLabelContact">Get in Touch</div>
-    <div class="sec-title center" id="secTitleContact">お問い合わせ</div>
-    <div class="contact-wrap">
-      <div class="contact-info" id="contactInfoText">
-        研究に関するご質問等、ご連絡を歓迎します
-      </div>
-      <div class="contact-form">
-        <div class="form-group">
-          <label class="form-label" id="lblName">相手のお名前</label>
-          <input type="text" id="formName" placeholder="山田 花子">
-        </div>
-        <div class="form-group">
-          <label class="form-label" id="lblEmail">メールアドレス</label>
-          <input type="email" id="formEmail" placeholder="example@university.ac.jp">
-        </div>
-        <div class="form-group">
-          <label class="form-label" id="lblMsg">メッセージ</label>
-          <textarea id="formMsg" placeholder="ご連絡内容をご記入ください"></textarea>
-        </div>
-        <button class="submit-btn" id="submitBtn" onclick="sendMail()">送信する</button>
-        <p class="form-msg" id="formResult">メールアプリが開きます。そのまま送信してください。</p>
-      </div>
-    </div>
-  </section>
-</div>
+
 
 <footer>
   <span id="footerText">© 2026 田中里奈 TANAKA Rina.</span>
@@ -507,7 +474,7 @@
     document.getElementById('formResult').style.display = 'block';
   }
 
-  const clicks = { 1: 0, 2: 0, 3: 0 };
+  const clicks = { 1: 0, 2: 0 };
   function countClick(id) {
     clicks[id]++;
     document.getElementById('badge' + id).textContent = clicks[id] + ' views';
@@ -521,7 +488,6 @@
       navProfile: 'プロフィール',
       navResearch: '研究',
       navNews: 'お知らせ',
-      navContact: 'お問い合わせ',
       heroName: '田中　里奈',
       heroRole: 'TANAKA Rina',
       heroAffil: '名古屋大学大学院情報学研究科　心理・認知科学専攻<br>博士後期課程3年',
@@ -534,17 +500,9 @@
       r1d: '東アジアと北米を中心に、サポート要請・提供の文化差と、その背景にある心理過程を検討しています。',
       r2t: '子どもの対人発達',
       r2d: '子どもが困ったときに周囲へ助けを求める行動が、どのように発達し文化差として現れるのかを研究しています。',
-      r3t: '文化と親子相互作用',
-      r3d: '親の語りかけや期待、日常的な相互作用を通じて、子どもが文化的な解釈枠組みをどのように学ぶかを検討しています。',
+
       secLabelNews: 'Updates',
       secTitleNews: 'お知らせ',
-      secLabelContact: 'Get in Touch',
-      secTitleContact: 'お問い合わせ',
-      contactInfoText: '研究に関するご質問等、ご連絡を歓迎します',
-      lblName: '相手のお名前',
-      lblEmail: 'メールアドレス',
-      lblMsg: 'メッセージ',
-      submitBtn: '送信する',
       footerText: '© 2026 田中里奈 TANAKA Rina.'
     },
     en: {
@@ -554,7 +512,6 @@
       navProfile: 'Profile',
       navResearch: 'Research',
       navNews: 'News',
-      navContact: 'Contact',
       heroName: 'TANAKA Rina',
       heroRole: 'Doctoral Student',
       heroAffil: 'Department of Psychology and Cognitive Science<br>Graduate School of Informatics, Nagoya University',
@@ -567,17 +524,9 @@
       r1d: 'I examine cultural differences in support seeking and support provision, mainly across East Asian and North American contexts.',
       r2t: 'Children’s Social Development',
       r2d: 'I investigate how children’s help-seeking behavior develops and how cultural differences emerge across development.',
-      r3t: 'Culture and Parent-Child Interaction',
-      r3d: 'I explore how children learn culturally grounded interpretive frameworks through parental feedback, expectations, and everyday interaction.',
+
       secLabelNews: 'Updates',
       secTitleNews: 'News',
-      secLabelContact: 'Get in Touch',
-      secTitleContact: 'Contact',
-      contactInfoText: 'I welcome inquiries regarding my research and related matters.',
-      lblName: 'Your Name',
-      lblEmail: 'Email',
-      lblMsg: 'Message',
-      submitBtn: 'Send',
       footerText: '© 2026 田中里奈 TANAKA Rina.'
     }
   };
