@@ -472,16 +472,30 @@
   <span id="footerText">© 2026 田中里奈 TANAKA Rina.</span>
 </footer>
 
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
-  const CONTACT_EMAIL = 'tanaka.rina.b5@s.mail.nagoya-u.ac.jp';
-
-  // Twitter/Xウィジェットの読み込み確認と初期化
-  window.addEventListener('load', function() {
+  // Twitter ウィジェット初期化関数
+  function loadTwitterWidget() {
     if (window.twttr && window.twttr.widgets) {
       window.twttr.widgets.load();
+    } else {
+      setTimeout(loadTwitterWidget, 500);
     }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    loadTwitterWidget();
   });
+
+  // ページ読み込み完了後も再度初期化
+  window.addEventListener('load', function() {
+    setTimeout(loadTwitterWidget, 100);
+  });
+</script>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script>
+  const CONTACT_EMAIL = 'tanaka.rina.b5@s.mail.nagoya-u.ac.jp';
 
   function sendMail() {
     const name  = document.getElementById('formName').value.trim();
