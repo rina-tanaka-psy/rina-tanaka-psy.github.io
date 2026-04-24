@@ -425,14 +425,7 @@
     <div class="sec-label center" id="secLabelNews">Updates</div>
     <div class="sec-title center" id="secTitleNews">お知らせ</div>
     <div class="news-wrap">
-      <a class="twitter-timeline"
-         data-height="600"
-         data-theme="light"
-         data-chrome="nofooter"
-         data-lang="ja"
-         href="https://twitter.com/RinaTanaka2478?ref_src=twsrc%5Etfw">
-         Posts by @RinaTanaka2478
-      </a>
+      <a class="twitter-timeline" href="https://twitter.com/RinaTanaka2478?ref_src=twsrc%5Etfw">Tweets by RinaTanaka2478</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       <div class="x-embed-note" style="font-size: 12px; color: #999; margin-top: 12px; text-align: center;">
         ※X（Twitter）からの埋め込み表示です。スクロールでより多くのツイートをご覧いただけます。
       </div>
@@ -471,28 +464,6 @@
 <footer>
   <span id="footerText">© 2026 田中里奈 TANAKA Rina.</span>
 </footer>
-
-<script>
-  // Twitter ウィジェット初期化関数
-  function loadTwitterWidget() {
-    if (window.twttr && window.twttr.widgets) {
-      window.twttr.widgets.load();
-    } else {
-      setTimeout(loadTwitterWidget, 500);
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    loadTwitterWidget();
-  });
-
-  // ページ読み込み完了後も再度初期化
-  window.addEventListener('load', function() {
-    setTimeout(loadTwitterWidget, 100);
-  });
-</script>
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <script>
   const CONTACT_EMAIL = 'tanaka.rina.b5@s.mail.nagoya-u.ac.jp';
