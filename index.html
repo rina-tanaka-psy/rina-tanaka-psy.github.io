@@ -426,14 +426,16 @@
     <div class="sec-title center" id="secTitleNews">お知らせ</div>
     <div class="news-wrap">
       <a class="twitter-timeline"
-         data-height="420"
-         data-theme="dark"
-         data-chrome="noheader nofooter noborders"
+         data-height="600"
+         data-theme="light"
+         data-chrome="nofooter"
          data-lang="ja"
          href="https://twitter.com/RinaTanaka2478?ref_src=twsrc%5Etfw">
          Posts by @RinaTanaka2478
       </a>
-      <div class="x-embed-note"></div>
+      <div class="x-embed-note" style="font-size: 12px; color: #999; margin-top: 12px; text-align: center;">
+        ※X（Twitter）からの埋め込み表示です。スクロールでより多くのツイートをご覧いただけます。
+      </div>
     </div>
   </section>
 </div>
@@ -473,6 +475,13 @@
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script>
   const CONTACT_EMAIL = 'tanaka.rina.b5@s.mail.nagoya-u.ac.jp';
+
+  // Twitter/Xウィジェットの読み込み確認と初期化
+  window.addEventListener('load', function() {
+    if (window.twttr && window.twttr.widgets) {
+      window.twttr.widgets.load();
+    }
+  });
 
   function sendMail() {
     const name  = document.getElementById('formName').value.trim();
